@@ -1,0 +1,37 @@
+{% comment %} Esta es la clase base de esta heredan las demas {% endcomment %}
+
+{% load static  %}  
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'eHeader.css' %}" media="screen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dulce Capricho</title>
+</head>
+<body>
+    <header class="header">
+        <div class="flex-container">
+            <div><img src="{% static 'Imagenes/logo.gif' %}" width="150" height="150"></div>
+            <nav class="navigation" >
+                <ul >
+                   
+                    <li><a href="http://localhost:8000/Home/" >HOME</a></li> 
+                    <li><a href="http://localhost:8000/Home/promociones/">PROMOCIONES</a></li>
+                    <li><a href="#">DOMICILIOS</a></li>
+                    <li><a href="#">REGÍSTRATE</a></li>
+                    <li><a href="#">CONTÁCTANOS</a></li>
+                    <li><a href="https://www.facebook.com/Dulcecaprichoheladosymalteadas" ><img src="{% static 'Imagenes/face.png' %}"width="40" height="40"></a></li>
+                </ul>          
+            </nav>
+        </div>
+    </header>
+
+ {% block content %}
+{% comment %} acá va el contenido que va a cambiar en las otras plantillas {% endcomment %}
+ {% endblock %}
+
+ {% include "footer.html"%}
+</body>
+</html>
