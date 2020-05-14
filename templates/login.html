@@ -1,0 +1,31 @@
+{% load static  %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    {% include "header.html"%}
+    <link rel="stylesheet" href="{% static 'estiloLogin.css' %}">
+    <title>Login</title>
+</head>
+<body>
+    <div  class="form">
+        <img  class="logo" src="{% static 'Imagenes/logo.gif' %}">
+        <h1>Login Here</h1>
+        <form>
+            
+            <input id="email" type="email" placeholder="Ingrese su correo" required>
+
+            <input id="contrasena" type="password" placeholder="Ingrese su contraseña" required>
+
+            <input type="submit" value="Login">
+           <center>
+            <a href="a">Crea una Cuenta</a>
+            <br>
+            <a href="a">¿Olvídaste tu contraseña?</a>
+           </center>
+            
+        </form>
+    </div>   
+    {% include "footer.html"%} 
+</body>
+</html>

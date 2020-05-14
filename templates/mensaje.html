@@ -1,0 +1,34 @@
+{% load static  %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "header.html"%}
+    <link rel="stylesheet" href="{% static 'estiloMensaje.css' %}">
+<body>   
+   
+    <main>
+    <form action="" method="POST" id="form">
+        <div class="form">
+            <h1>Contacto</h1>
+            <div class="grupo">
+                <input type="text" name="" id="name" required><samp class="barra"></samp>
+                <label for="">Asunto</label>
+            </div>
+            <div class="grupo">
+                <input type="email" name="" id="email" required><samp class="barra"></samp>
+                <label for="">Email</label>
+            </div>
+            <div class="grupo">
+                <input type="text" name="" id="Mensaje" style="height: 200px;" required><samp class="barra"></samp>
+                <label for="">Mensaje</label>
+            </div>
+           <button type="submit" >Enviar</button> 
+            <p class="warnings" id="warnings"></p>
+        </div>
+    </form>
+</main>
+
+    
+    {% include "footer.html"%}
+</body>
+</html>
